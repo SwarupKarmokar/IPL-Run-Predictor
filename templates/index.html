@@ -6,8 +6,7 @@
     <title>wellcome</title>
     <style>
         body{
-            background-image: url('/image/ipl.png');
-            background-size: cover ;
+            background-color: rgb(95, 117, 160);
         }
         form{
             text-align: center;
@@ -21,10 +20,16 @@
         div{
             text-align: center;
         }
+        h3{
+            text-align: center;
+            font-size: 50px;
+            color:darkblue;
+        }
     </style>
 </head>
 <body>
     <h5 style="color: cadetblue;">Lets predict the score:</h5>
+    <h3>IPL-Run-Predictor</h3>
     <form action="{{url_for('predict')}}" method="POST">
                             <!-- Batting Team Dropdown -->
                             <select class="form-input align-center" name="batting-team">
