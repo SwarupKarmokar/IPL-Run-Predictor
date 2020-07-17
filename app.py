@@ -84,7 +84,7 @@ def predict():
 
         data = np.array([temp_array])
         my_prediction = int(linear_model.predict(data)[0])
-        return render_template('index.html', prediction_text='Projected Score Will Be: {} Lakhs'.format(my_prediction))
+        return render_template('index.html', prediction_text='Projected Score Will Be: {}'.format(my_prediction))
 
 
 if __name__ == '__main__':
