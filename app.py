@@ -56,23 +56,23 @@ def predict():
 
         venue = request.form['venue']
         if venue == "venue_Eden Gardens":
-            temp_array == temp_array + [1, 0, 0, 0, 0, 0, 0, 0, 0]
+            temp_array = temp_array + [1, 0, 0, 0, 0, 0, 0, 0, 0]
         elif venue == "venue_Feroz Shah Kotla":
-            temp_array == temp_array + [0, 1, 0, 0, 0, 0, 0, 0, 0]
+            temp_array = temp_array + [0, 1, 0, 0, 0, 0, 0, 0, 0]
         elif venue == "venue_Holkar Cricket Stadium":
-            temp_array == temp_array + [0, 0, 1, 0, 0, 0, 0, 0, 0]
+            temp_array = temp_array + [0, 0, 1, 0, 0, 0, 0, 0, 0]
         elif venue == "venue_M Chinnaswamy Stadium":
-            temp_array == temp_array + [0, 0, 0, 1, 0, 0, 0, 0, 0]
+            temp_array = temp_array + [0, 0, 0, 1, 0, 0, 0, 0, 0]
         elif venue == "venue_MA Chidambaram Stadium, Chepauk":
-            temp_array == temp_array + [0, 0, 0, 0, 1, 0, 0, 0, 0]
+            temp_array = temp_array + [0, 0, 0, 0, 1, 0, 0, 0, 0]
         elif venue == "venue_Maharashtra Cricket Association Stadium":
-            temp_array == temp_array + [0, 0, 0, 0, 0, 1, 0, 0, 0]
+            temp_array = temp_array + [0, 0, 0, 0, 0, 1, 0, 0, 0]
         elif venue == "venue_Rajiv Gandhi International Stadium, Uppal":
-            temp_array == temp_array + [0, 0, 0, 0, 0, 0, 1, 0, 0]
+            temp_array = temp_array + [0, 0, 0, 0, 0, 0, 1, 0, 0]
         elif venue == "venue_Sawai Mansingh Stadium":
-            temp_array == temp_array + [0, 0, 0, 0, 0, 0, 0, 1, 0]
+            temp_array = temp_array + [0, 0, 0, 0, 0, 0, 0, 1, 0]
         elif venue == "venue_Wankhede Stadium":
-            temp_array == temp_array + [0, 0, 0, 0, 0, 0, 0, 0, 1]
+            temp_array = temp_array + [0, 0, 0, 0, 0, 0, 0, 0, 1]
 
         overs = float(request.form['overs'])
         runs = int(request.form['runs'])
