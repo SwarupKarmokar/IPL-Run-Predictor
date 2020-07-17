@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wellcome</title>
+    <style>
+        body{
+            background-image: url('/image/ipl.jpg');
+            background-size: cover ;
+        }
+        form{
+            text-align: center;
+        }
+        input{
+            text-align: center;
+            background-color: rgb(100, 237, 212);
+        }
+    </style>
+</head>
+<body>
+    <h5 style="color: cadetblue;">Lets predict the score:</h5>
+    <form action="{{url_for('predict')}}" method="POST">
+                            <!-- Batting Team Dropdown -->
+                            <select class="form-input align-center" name="batting-team">
+                                <option value="none">--- Select a Batting team ---</option>
+                                <option value="Mumbai Indians">Mumbai Indians</option>
+                                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                                <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                                <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                            </select><br>
+                            <!-- Bowling Team Dropdown -->
+                            <select class="form-input align-center" name="bowling-team">
+                                <option value="none">--- Select a Bowling team ---</option>
+                                <option value="Mumbai Indians">Mumbai Indians</option>
+                                <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                                <option value="Chennai Super Kings">Chennai Super Kings</option>
+                                <option value="Rajasthan Royals">Rajasthan Royals</option>
+                                <option value="Kings XI Punjab">Kings XI Punjab</option>
+                                <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                                <option value="Delhi Daredevils">Delhi Daredevils</option>
+                                <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                            </select><br>
+                            <!-- venue Dropdown -->
+                            <select class="form-input align-center" name="venue">
+                                <option value="none">---------------------- Select a venue --------------------</option>
+                                <option value="venue_Eden Gardens">venue_Eden Gardens</option>
+                                <option value="venue_Feroz Shah Kotla">venue_Feroz Shah Kotla</option>
+                                <option value="venue_Holkar Cricket Stadium">venue_Holkar Cricket Stadium</option>
+                                <option value="venue_M Chinnaswamy Stadium">venue_M Chinnaswamy Stadium</option>
+                                <option value="venue_MA Chidambaram Stadium, Chepauk">venue_MA Chidambaram Stadium, Chepauk</option>
+                                <option value="venue_Maharashtra Cricket Association Stadium">venue_Maharashtra Cricket Association Stadium</option>
+                                <option value="venue_Rajiv Gandhi International Stadium, Uppal">venue_Rajiv Gandhi International Stadium, Uppal</option>
+                                <option value="venue_Sawai Mansingh Stadium">venue_Sawai Mansingh Stadium</option>
+                                <option value="venue_Wankhede Stadium">venue_Wankhede Stadium</option>
+                            </select><br>
+                            <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) ex: 7.2"><br>
+                            <input class="form-input" type="text" name="runs" placeholder="Runs ex: 55"><br>
+                            <input class="form-input" type="text" name="wickets" placeholder="Wickets ex: 4"><br>
+                            <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in prev5 Overs ex: 42"><br>
+                            <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in prev5 Overs ex: 3"><br>
+        
+                    <input type="submit" class="myButton" value="Predict Score">
+    </form>
+    <div>
+        <div>
+            {{prediction_text}}
+        </div>
+    </div>
+</body>
+</html>
